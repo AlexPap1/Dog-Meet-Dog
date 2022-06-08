@@ -42,5 +42,15 @@ Pet.belongsTo(User, {
     onDelete: 'SET NULL'
 });
 
+Pet.hasMany(Post, {
+    foreignKey: 'post_id'
+});
+
+Post.belongsTo(Pet, {
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+});
+
+
 
 module.exports = { User, Post, Comment, Pet };
