@@ -22,6 +22,7 @@
 
 ## NPM Packages:
 * [bcrypt v5.0.1](https://www.npmjs.com/package/bcrypt)
+* [cloudinary v1.30.0](https://www.npmjs.com/package/cloudinary)
 * [connect-session-sequelize v7.1.4](https://www.npmjs.com/package/connect-session-sequelize)
 * [dotenv v16.0.1](https://www.npmjs.com/package/dotenv)
 * [express v4.18.1](https://www.npmjs.com/package/express)
