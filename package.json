@@ -1,6 +1,28 @@
 {
+  "name": "dog-meet-dog",
+  "description": "Dog meets Dog Social Application",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexPap1/Dog-Meet-Dog.git"
+  },
+  "author": "Alex Pappagallo, Andrew Kim, Caitlin Clifford, Jeffrey Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexPap1/Dog-Meet-Dog/issues"
+  },
+  "homepage": "https://github.com/AlexPap1/Dog-Meet-Dog#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "sequelize": "^6.20.1"
   }
