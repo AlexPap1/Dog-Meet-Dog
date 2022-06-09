@@ -28,6 +28,7 @@
 * [express v4.18.1](https://www.npmjs.com/package/express)
 * [express-handlebars v6.0.6](https://www.npmjs.com/package/express-handlebars)
 * [express-session v1.17.3](https://www.npmjs.com/package/express-session)
+* [multer v1.4.5-lts.1](https://www.npmjs.com/package/multer)
 * [mysql2 v2.3.3](https://www.npmjs.com/package/mysql2)
 * [sequelize v6.20.1](https://www.npmjs.com/package/sequelize)
 
