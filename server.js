@@ -1,4 +1,3 @@
-// controllers/api
 // views
 // public
 
