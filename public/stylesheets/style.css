@@ -1,0 +1,12 @@
+body {
+    background-image: url('');
+}
+
+.site-header {
+    text-align: center;
+}
+
+.site-title {
+    text-decoration: none;
+    color: #6f9408;
+}
