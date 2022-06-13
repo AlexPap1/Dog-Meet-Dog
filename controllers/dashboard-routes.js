@@ -146,7 +146,28 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
-  
+  router.get('/add/', withAuth, (req, res) => {
+    Pet.findAll({
+      where: {
+        // use the ID from the session
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'petname',
+        'pet_info'
+      ],
+    })
+      .then(dbPostData => {
+        // serialize data before passing to template
+        const posts = dbPostData.map(post => post.get({ plain: true }));
+        res.render('add-pet', { posts, loggedIn: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
       
   module.exports = router;
   
