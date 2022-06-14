@@ -17,6 +17,7 @@ window.addEventListener("load", function () {
         }
       });
     }
-  
     form.addEventListener("submit", uploadImage);
 });
+
+// going to remove and embed into add-post logic

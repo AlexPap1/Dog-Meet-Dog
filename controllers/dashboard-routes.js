@@ -46,9 +46,9 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
-  
-  router.get('/edit/:id', withAuth, (req, res) => {
+});
+
+router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
       where: {
         id: req.params.id
@@ -99,9 +99,9 @@ router.get('/', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  });
+});
         
-  router.get('/create/', withAuth, (req, res) => {
+router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
         // use the ID from the session
@@ -145,8 +145,9 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
-  router.get('/add/', withAuth, (req, res) => {
+});
+  
+router.get('/add/', withAuth, (req, res) => {
     Pet.findAll({
       where: {
         // use the ID from the session
@@ -167,7 +168,7 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
+});
       
-  module.exports = router;
+module.exports = router;
   
