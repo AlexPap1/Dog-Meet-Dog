@@ -1,5 +1,13 @@
 body {
-    background-image: url('');
+    background: url('../images/DogWallpaper2.png') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
 }
 
 .site-header {
@@ -8,5 +16,23 @@ body {
 
 .site-title {
     text-decoration: none;
-    color: #6f9408;
+    color: #5c7c04;
+    font-size: 50px;
+    vertical-align: auto;
+    
 }
+
+.card-header {
+    background: linear-gradient(to right, #dee5cd, #aebe82, #5c7c04);
+    color: #374a02
+}
+
+footer {
+    border-top: 1px solid #5c7c04;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+    color: #5c7c04;
+    background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
+  }
