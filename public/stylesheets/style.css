@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     background: url('../images/DogWallpaper2.png') no-repeat center fixed;
     -webkit-background-size: cover;
@@ -19,9 +27,50 @@ header {
     color: #5c7c04;
     font-size: 50px;
     vertical-align: auto;
-    
 }
 
+/*Login CSS*/
+.container{
+    border: 3px solid #6f9408;
+    background-color: #E7E1C9;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    margin: auto;
+    width: 50%;
+}
+
+.title{
+    color:#6f9408; 
+}
+
+#username-signup, #email-signup, #password-signup, #password-login, #email-login{
+    border: 1px solid #024e76;
+    display: block;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.container button{
+  color: black;
+  background-color: #A1C1AD;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.login {
+    border: 3px solid #6f9408;
+    background-color: #E7E1C9;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    margin: auto;
+    width: 50%;
+}
+   
 .card-header {
     background: linear-gradient(to right, #dee5cd, #aebe82, #5c7c04);
     color: #374a02
