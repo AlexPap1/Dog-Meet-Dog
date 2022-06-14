@@ -12,15 +12,15 @@
 <body>
   <div class="wrapper">
     <header>
-      <p class="site-header fs-1">
+      <p class="site-header">
         <a href="/" class="site-title">Dog Meet Dog</a>
       </p>
     </header>
     <nav class="nav">
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <a href="/dashboard/add">add pet</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/dashboard" class="dash-link">dashboard</a>
+        <a href="/dashboard/add" class="add-pet-link">add pet</a>
+        <a href="/logout" id="logout" class="logout-link">logout</a>
         {{else}}
         <div class="login">
         <a href="/login">login</a>
