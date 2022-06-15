@@ -1,5 +1,6 @@
-async function newFormHandler(event) {
-    event.preventDefault();
+const form = document.getElementById("upload");
+
+async function newFormHandler() {
   
     const title = document.querySelector('input[name="post-title"]').value;
     const post_content = document.querySelector('input[name="post-content"]').value;
@@ -23,28 +24,25 @@ async function newFormHandler(event) {
     }
 };
 
-// Image Upload testing
 // Image Upload Logic
-//window.addEventListener("load", function () {
-  const form = document.getElementById("upload");
-
-  function uploadImage(e) {
-    e.preventDefault();
+function uploadImage() {
     const formData = new FormData(upload);
     for (let [name, value] of formData.entries()) {
-      // console.log(name, value);
     }
     fetch("/api/dashboard/create/", {
       method: "POST",
       body: formData,
     }).then((res) => {
       if (res.ok) {
-        console.log(res);
         console.log("Complete!");
       }
     });
-  }
-  form.addEventListener("submit", uploadImage);
-//});
+};
+
+function formUploader(event) {
+  event.preventDefault();
+  uploadImage();
+  newFormHandler();
+}
   
-document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+form.addEventListener('submit', formUploader);

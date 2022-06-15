@@ -18,7 +18,7 @@
 * HTML
 * CSS
 * JavaScript
-* Node/[NPM Packages](#npm-packages)
+* Node / [NPM Packages](#npm-packages)
 
 ## NPM Packages:
 * [bcrypt v5.0.1](https://www.npmjs.com/package/bcrypt)
@@ -41,15 +41,15 @@
 
 ## Installation:
 * Download the zip file, or clone to your local machine.
-* Open a new terminal in the correct directory, and run command: npm i
-* Create a .env file; Populate the file with corresponding data: DB_NAME DB_USER - DB_PW  on separate lines, and insert your appropriate credentials.
+* Open a new terminal in the correct directory, and run command: `npm i`
+* Create a `.env` file; Populate the file with corresponding data: `DB_NAME` `DB_USER` - `DB_PW`  on separate lines, and insert your appropriate credentials.
 
 ## Usage:
-* After you finish installation procedures, enter the following command in the terminal: mysql -u (*insert username*) -p
+* After you finish installation procedures, enter the following command in the terminal: `mysql -u (*insert username*) -p`
 * Please enter your MySQL password when prompted.
-* In the MySQL command line, use command: source db/schema.sql; to create the proper database.
-* After the prompt displays the database was created, use command: quit; to exit the MySQL Command Line.
-* Lastly, use commands: npm run seed - npm start to seed your Database, and to start the server respectively.
+* In the MySQL command line, use command: `source db/schema.sql;` to create the proper database.
+* After the prompt displays the database was created, use command: `quit;` to exit the MySQL Command Line.
+* Lastly, use commands: `npm run seed` - `npm start` to seed your Database, and to start the server respectively.
 
 ## Author(s):
 * Alex Pappagallo 

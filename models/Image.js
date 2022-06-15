@@ -21,12 +21,13 @@ Image.init(
                 len: [1]
             }
         },
-        image_url: {
+        imageURL: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
               model: 'user',
               key: 'id'
@@ -34,6 +35,7 @@ Image.init(
         },
         post_id: {
             type: DataTypes.INTEGER,
+            // allowNull: false,
             references: {
               model: 'post',
               key: 'id'
@@ -43,7 +45,6 @@ Image.init(
     {
         sequelize,
         timestamps: false,
-        underscored: true,
         freezeTableName: true,
         modelName: "image",
     }
