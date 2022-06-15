@@ -1,12 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background-image: url('');
+    background: url('../images/DogWallpaper2.png') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
 }
 
 .site-header {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .site-title {
     text-decoration: none;
-    color: #6f9408;
+    color: #5c7c04;
+    font-size: 50px;
+    vertical-align: auto;
+}
+
+.nav {
+    justify-content: space-around;
+    background: rgba(222, 229, 205, 0.7);
+    padding-top: 2px;
+}
+
+.dash-link, .add-pet-link, .logout-link, .comment-link {
+    text-decoration: none;
+    color: #68724e
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 0;
+    margin: 20px 20px 0 20px;
+}
+   
+.card-header {
+    background: linear-gradient(to right, #dee5cd, #aebe82, #5c7c04);
+    color: #374a02;
+    font-size: larger;
+}
+
+.plain-text {
+    color: #374a02;
+}
+.info-text {
+    color: #68724e;
+}
+
+.site-title:hover, .dash-link:hover, .add-pet-link:hover, .comment-link:hover, .edit-link:hover {
+    color: #374a02
+}
+
+.dash {
+    display: flex;
+}
+
+.dash-header {
+    margin: auto;
+    text-align: center;
+    color: #68724e;
+    padding: 25px 80px 0 0
+}
+
+.button {
+    margin: 30px auto auto 22px;
+}
+
+.edit-link {
+    margin: 20px 20px 0 20px;
+    text-decoration: none;
+    color: #374a02;
+    padding-left: 2px;
+}
+
+footer {
+    border-top: 1px solid #5c7c04;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+    color: #5c7c04;
+    background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
+  }
+
+  /*Login CSS*/
+.container{
+    border: 3px solid #6f9408;
+    background-color: #E7E1C9;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    margin: auto;
+    width: 50%;
+}
+
+.title{
+    color:#6f9408; 
+}
+
+#username-signup, #email-signup, #password-signup, #password-login, #email-login{
+    border: 1px solid #024e76;
+    display: block;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.container button{
+  color: black;
+  background-color: #A1C1AD;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.login {
+    border: 3px solid #6f9408;
+    background-color: #E7E1C9;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    margin: auto;
+    width: 50%;
 }

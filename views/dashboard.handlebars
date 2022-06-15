@@ -1,11 +1,10 @@
-  <div>
-        <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">Create Post</button></a>
-    </div>
-
-{{#if posts.length}}
+  {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2><hr>
-  <ol>
+  <div class="dash">
+        <a href="/dashboard/create/"><button id="create-post" class="button is-primary">Create Post</button></a>
+  <h2 class="dash-header">Your Posts</h2>
+  </div>
+  <ol class="post-list">
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
