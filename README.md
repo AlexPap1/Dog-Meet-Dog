@@ -3,7 +3,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Description:
-* 
+* Users will be able to login to their own accounts and add their pet’s information online.
 
 ## Tables of Contents:
 * [Technologies](#technologies)
@@ -35,13 +35,13 @@
 
 ## Screenshot:
 * 
-
+![HomePage](/public/images/screenshot.jpg)
 
 ## Installation:
-*
+* From repository 'git clone <url>' to clone down repository to local moachine 'npm i' to install dependecies and packages to local machine. Then, run 'npm start' to start server.
 
 ## Usage:
-*
+* Users will be able to create & edit posts and comment with the interaction of other users. The main page will consist of posts about their pets.
 
 ## Author(s):
 * Alex Pappagallo 
