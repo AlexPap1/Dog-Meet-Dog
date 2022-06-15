@@ -1,27 +1,26 @@
-async function newPetHandler(event) {
+async function PetFormHandler(event) {
     event.preventDefault();
   
-    const pet_name = document.querySelector('input[name="pet-name"]').value;
-    const pet_info = document.querySelector('input[name="pet-info"]').value;
-    //image value
+    const petname = document.querySelector('#petname-add').value.trim();
+    const pet_info = document.querySelector('#petinfo-add').value.trim();
   
-    const response = await fetch(`/api/pets`, {
-      method: 'POST',
-      body: JSON.stringify({
-        pet_name,
-        pet_info,
-        //image
-      }),
-      headers: {
-        'Content-Type': 'application/json'
+    if (petname && pet_info) {
+      const response = await fetch('/api/pets', {
+        method: 'post',
+        body: JSON.stringify({
+          petname,
+          pet_info,
+        }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      console.log(response);
+
+      if (response.ok) {
+        document.location.replace('/dashboard/');
+      } else {
+        alert(response.statusText);
       }
-    });
-  
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert(response.statusText);
     }
   }
-  
-  document.querySelector('.new-pet-form').addEventListener('submit', newPetHandler);
+
+  document.querySelector('.new-pet-form').addEventListener('submit', PetFormHandler);

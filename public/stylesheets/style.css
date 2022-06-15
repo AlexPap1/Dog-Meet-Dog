@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    height: 1500px
+}
+
 body {
     background: url('../images/DogWallpaper2.png') no-repeat center fixed;
     -webkit-background-size: cover;
@@ -50,6 +54,8 @@ header {
 .card {
     padding: 0;
     margin: 20px 20px 0 20px;
+    /* border: none */
+    border-top: none;
 }
    
 .card-header {
@@ -124,14 +130,14 @@ footer {
     opacity: 100;
 }
 
-#username-signup, #email-signup, #password-signup, #password-login, #email-login, #post-title, #post-content, #pet-name, #pet-info {
+#username-signup, #email-signup, #password-signup, #password-login, #email-login, #post-title, #post-content, #petname-add, #petinfo-add {
     font-size: 20px;
     color: #5c7c04;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.password-login, .email-login, .post-title, .post-content, .pet-name, .pet-info {
+.password-login, .email-login, .post-title, .post-content, .petname-add, .petinfo-add {
     font-size: 20px;
     color: #5c7c04;
     margin-bottom: 15px;
@@ -155,6 +161,10 @@ input:focus {
     border: 2px solid #5c7c04;
 }
 
+.all-posts {
+    border: none;
+}
+
 .add-comment {
     border: 0
 }
@@ -173,8 +183,4 @@ input:focus {
 
 .card-body-text, .comment-text {
     color: #754927;
-}
-
-.all-posts {
-    height: 2000px;
 }

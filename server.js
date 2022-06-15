@@ -1,5 +1,6 @@
-// views
-// public
+// image section for vreate post / edit post HB
+
+//post info / edit post HB files add pet name/ info for each post 'by' section
 
 const path = require('path');
 const express = require('express');
