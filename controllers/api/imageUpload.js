@@ -39,7 +39,7 @@ router.post('/create/', upload.single("image"), (req, res) => {
             imageURL: result.secure_url,
             user_id: req.session.user_id,
         }).then((imageData) => {
-            console.log(dbPostData);
+            console.log(res);
             res.send("complete!");
         });
     });
