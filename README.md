@@ -34,7 +34,7 @@
 * [sequelize v6.20.1](https://www.npmjs.com/package/sequelize)
 
 ## Screenshot:
-* [Heroku Link:]()
+* [Heroku Link:](https://dog-meet-dog-blog.herokuapp.com/)
 
 * Screenshot:
 
