@@ -44,11 +44,11 @@ Pet.belongsTo(User, {
 });
 
 Pet.hasMany(Post, {
-    foreignKey: 'post_id'
+    foreignKey: 'user_id'
 });
 
 Post.belongsTo(Pet, {
-    foreignKey: 'post_id',
+    foreignKey: 'user_id',
     onDelete: 'SET NULL'
 });
 
