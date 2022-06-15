@@ -36,7 +36,7 @@ header {
     padding-top: 2px;
 }
 
-.dash-link, .add-pet-link, .logout-link, .comment-link {
+.login-link, .dash-link, .add-pet-link, .logout-link, .comment-link {
     text-decoration: none;
     color: #68724e
 }
@@ -65,11 +65,11 @@ header {
     color: #68724e;
 }
 
-.site-title:hover, .dash-link:hover, .add-pet-link:hover, .comment-link:hover, .edit-link:hover {
+.site-title:hover, .dash-link:hover, .add-pet-link:hover, .comment-link:hover, .edit-link:hover, .login-link:hover {
     color: #374a02
 }
 
-.dash {
+.dash, .c {
     display: flex;
 }
 
@@ -80,8 +80,12 @@ header {
     padding: 25px 80px 0 0
 }
 
-.button {
+#create-post {
     margin: 30px auto auto 22px;
+}
+
+#view-pets {
+    margin: 30px 22px auto auto;
 }
 
 .edit-link {
@@ -99,46 +103,78 @@ footer {
     font-size: 110%;
     color: #5c7c04;
     background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
-  }
+}
 
-  /*Login CSS*/
 .container{
     border: 3px solid #6f9408;
     background-color: #E7E1C9;
     padding: 20px;
-    width: 500px;
-    color: #024e76;
-    margin: auto;
+    margin-top: 50px;
     width: 50%;
 }
 
-.title{
-    color:#6f9408; 
+.login-title, .signup-title, .create-title, .add-pet-title {
+    color:#5c7c04; 
 }
 
-#username-signup, #email-signup, #password-signup, #password-login, #email-login{
-    border: 1px solid #024e76;
-    display: block;
-    font-size: 16px;
-    color: #024e76;
+.login-hr, .signup-hr, .create-hr, .add-pet-hr {
+    border: none;
+    border-top: 2px solid #5c7c04;
+    background-color: #5c7c04;
+    opacity: 100;
+}
+
+#username-signup, #email-signup, #password-signup, #password-login, #email-login, #post-title, #post-content, #pet-name, #pet-info {
+    font-size: 20px;
+    color: #5c7c04;
     width: 100%;
     margin-bottom: 15px;
 }
 
+.password-login, .email-login, .post-title, .post-content, .pet-name, .pet-info {
+    font-size: 20px;
+    color: #5c7c04;
+    margin-bottom: 15px;
+}
+
 .container button{
-  color: black;
-  background-color: #A1C1AD;
+  color: #E7E1C9;
+  background-color: #5c7c04;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
 }
 
-.login {
-    border: 3px solid #6f9408;
-    background-color: #E7E1C9;
-    padding: 20px;
-    width: 500px;
-    color: #024e76;
-    margin: auto;
-    width: 50%;
+input {
+    outline: 2px solid #aebe82;
+    border: #5c7c04
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid #5c7c04;
+}
+
+.add-comment {
+    border: 0
+}
+
+.add-comment-body {
+    margin: 10px auto 0px 22px;
+}
+
+.add-comment-btn {
+    margin: 0px auto auto 22px
+}
+
+.comments {
+    opacity: 75%;
+}
+
+.card-body-text, .comment-text {
+    color: #754927;
+}
+
+.all-posts {
+    height: 2000px;
 }
