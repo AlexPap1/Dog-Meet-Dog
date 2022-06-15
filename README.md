@@ -3,7 +3,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Description:
-* Users will be able to login to their own accounts and add their pet’s information online.
+* Have you ever wanted to make puppy play dates but don't know who to ask? Dog Meet Dog is the newest Social Platform for Dog Owners and solves all those problems! Create a User Account, and add your pets! Then begin creating posts with content and photos! Users will even be able to comment on other's posts as well! What are you waiting for? Download Dog Meet Dog today!
 
 ## Tables of Contents:
 * [Technologies](#technologies)
@@ -34,14 +34,22 @@
 * [sequelize v6.20.1](https://www.npmjs.com/package/sequelize)
 
 ## Screenshot:
-* 
-![HomePage](/public/images/screenshot.jpg)
+* Screenshot:
+
+![This is the home page for the Dog Meet Dog Application!](/public/images/screenshot.jpg)
+
 
 ## Installation:
-* From repository 'git clone <url>' to clone down repository to local moachine 'npm i' to install dependecies and packages to local machine. Then, run 'npm start' to start server.
+* Download the zip file, or clone to your local machine.
+* Open a new terminal in the correct directory, and run command: npm i
+* Create a .env file; Populate the file with corresponding data: DB_NAME DB_USER - DB_PW  on separate lines, and insert your appropriate credentials.
 
 ## Usage:
-* Users will be able to create & edit posts and comment with the interaction of other users. The main page will consist of posts about their pets.
+* After you finish installation procedures, enter the following command in the terminal: mysql -u (*insert username*) -p
+* Please enter your MySQL password when prompted.
+* In the MySQL command line, use command: source db/schema.sql; to create the proper database.
+* After the prompt displays the database was created, use command: quit; to exit the MySQL Command Line.
+* Lastly, use commands: npm run seed - npm start to seed your Database, and to start the server respectively.
 
 ## Author(s):
 * Alex Pappagallo 
