@@ -10,6 +10,20 @@ const cloudinary = require("cloudinary").v2;
 // env import
 require('dotenv').config();
 
+// GET all Images (router.use(/images) as endpoint)
+// router.get('/images/', (req, res) => {
+//     Image.findAll()
+//         .then((images) => {
+//             const plain = images.map((image) => image.get({ plain: true }));
+//             console.log(plain);
+//             res.render("images", { images: plain });
+//         })
+//         .catch((err) => {
+//             res.send(err);
+//         });
+// });
+
+
 // POST new image for upload (router.use(/image/upload) as endpoint)
 router.post('/create/', upload.single("image"), (req, res) => {
     cloudinary.uploader.upload(req.file.path, (err, result) => {
