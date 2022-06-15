@@ -1,11 +1,10 @@
-<a href="/dashboard/create/"><button id="create-post" class="button is-primary">Create Post</button></a>
-  {{#if posts.length}}
 <section>
-  <div class="dash">
-      <!--<a href="/dashboard/create/"><button id="create-post" class="button is-primary">Create Post</button></a>-->
+  <div class="your-dash">
+      <a href="/dashboard/create/"><button id="create-post" class="button is-primary">Create Post</button></a>
         <h2 class="dash-header">Your Posts</h2>
       <a href="/dashboard/pets/"><button id="view-pets" class="button is-primary">My Pets</button></a>
   </div>
+  {{#if posts.length}}
   <ol class="post-list">
     {{#each posts as |post|}}
     <li>
@@ -17,7 +16,9 @@
 </section>
 {{else}}
 <br>
-<h4> Create a post to see them here. </h4>
+<div class="container">
+  <h3 class="no-posts"> Create a post to see it here. </h3>
+</div>
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
