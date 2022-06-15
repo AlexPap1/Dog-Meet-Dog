@@ -52,14 +52,4 @@ Post.belongsTo(Pet, {
     onDelete: 'SET NULL'
 });
 
-Image.belongsTo(Post, {
-    foreignKey: 'post_id',
-    onDelete: 'SET NULL'
-});
-
-User.hasMany(Image, {
-    foreignKey: 'user_id'
-});
-
-
 module.exports = { User, Post, Comment, Pet, Image };

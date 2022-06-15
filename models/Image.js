@@ -33,12 +33,13 @@ Image.init(
               key: 'id'
             }
         },
-        post_id: {
-            type: DataTypes.INTEGER,
-            // allowNull: false,
+        asset_id: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
             references: {
-              model: 'post',
-              key: 'id'
+                model: 'post',
+                key: 'image_asset_id'
             }
         },
     },

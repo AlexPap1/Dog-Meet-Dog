@@ -30,11 +30,11 @@ Post.init(
         key: 'id'
       }
     },
-    image_id: {
-      type: DataTypes.INTEGER,
+    image_asset_id: {
+      type: DataTypes.STRING,
       references: {
         model: 'image',
-        key: 'id'
+        key: 'asset_id'
       }
     }
   },

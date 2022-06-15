@@ -38,8 +38,9 @@ router.post('/create/', upload.single("image"), (req, res) => {
             imageName: req.body.fileName,
             imageURL: result.secure_url,
             user_id: req.session.user_id,
+            asset_id: result.asset_id,
         }).then((imageData) => {
-            console.log(res);
+            console.log(result);
             res.send("complete!");
         });
     });
