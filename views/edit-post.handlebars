@@ -1,39 +1,25 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2 class="edit-link">
-    Edit Post
-  </h2>
+<div class="container">
+  <h2 class="edit-title">Edit Post</h2>
+  <hr class="edit-hr">
   <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+      <label for="post-title" class="post-title">Title:</label>
+      <input name="post-title" id="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      <label for="post-content">My Post:</label>
-      <input class="textarea" name="post-content" type="text" value="{{post.post_content}}"/>
+      <label for="post-content" class="post-content">My Post:</label>
+      <input class="textarea" id="post-content" name="post-content" type="text" value="{{post.post_content}}"/>
     </div>
     <!--div for image edit -->
     <!--add pet info in below 'By' section -->
-    <div>
-      By you on {{format_date post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    <div class="date-display">
+      <span class="plain-text">By</span> <span class="info-text">You</span> <span class="plain-text">on</span> 
+        <span class="info-text">{{format_date post.created_at}}</span>
     </div>
     <button type="submit">Save post</button>
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
-</article>
-
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
-{{> comments post.comments}}
+</div>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
