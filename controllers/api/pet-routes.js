@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Pet.create({
     pet_info: req.body.pet_info,
-    pet_name: req.body.pet_name,
+    petname: req.body.petname,
     user_id: req.session.user_id,
     post_id: req.body.post_id
   })
