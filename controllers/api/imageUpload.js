@@ -10,6 +10,12 @@ const cloudinary = require("cloudinary").v2;
 // env import
 require('dotenv').config();
 
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
 // GET all Images (router.use(/images) as endpoint)
 // router.get('/images/', (req, res) => {
 //     Image.findAll()
@@ -22,7 +28,6 @@ require('dotenv').config();
 //             res.send(err);
 //         });
 // });
-
 
 // POST new image for upload (router.use(/image/upload) as endpoint)
 router.post('/create/', upload.single("image"), (req, res) => {
