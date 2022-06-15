@@ -54,7 +54,6 @@ header {
 .card {
     padding: 0;
     margin: 20px 20px 0 20px;
-    /* border: none */
     border-top: none;
 }
    
@@ -75,7 +74,7 @@ header {
     color: #374a02
 }
 
-.dash, .c {
+.your-dash, .c {
     display: flex;
 }
 
@@ -97,7 +96,7 @@ header {
 .edit-link {
     margin: 20px 20px 0 20px;
     text-decoration: none;
-    color: #374a02;
+    color: #5c7c04;
     padding-left: 2px;
 }
 
@@ -119,25 +118,25 @@ footer {
     width: 50%;
 }
 
-.login-title, .signup-title, .create-title, .add-pet-title {
+.login-title, .signup-title, .create-title, .add-pet-title, .edit-title, .no-posts {
     color:#5c7c04; 
 }
 
-.login-hr, .signup-hr, .create-hr, .add-pet-hr {
+.login-hr, .signup-hr, .create-hr, .add-pet-hr, .edit-hr {
     border: none;
     border-top: 2px solid #5c7c04;
     background-color: #5c7c04;
     opacity: 100;
 }
 
-#username-signup, #email-signup, #password-signup, #password-login, #email-login, #post-title, #post-content, #petname-add, #petinfo-add {
+#signup-username, #signup-email, #signup-password, #login-email, #login-password, #post-title, #post-content, #petname-add, #petinfo-add {
     font-size: 20px;
     color: #5c7c04;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.password-login, .email-login, .post-title, .post-content, .petname-add, .petinfo-add {
+.login-password, .login-email, .post-title, .post-content, .petname-add, .petinfo-add, .signup-username, .signup-email, .signup-password {
     font-size: 20px;
     color: #5c7c04;
     margin-bottom: 15px;
@@ -183,4 +182,13 @@ input:focus {
 
 .card-body-text, .comment-text {
     color: #754927;
+}
+
+.date-display {
+    margin-bottom: 15px;
+}
+
+.no-posts {
+    margin-left: 95px;
+    margin-top: 5px;
 }

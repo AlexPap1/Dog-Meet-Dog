@@ -8,7 +8,7 @@
         <br>
         <!--Add pet info in below 'by' section-->
         <div class="post-comments-info float-end">
-           <span class="plain-text">By</span> <span class="info-text">{{user.username}} {{pet.petname}} the {{pet.pet_info}} </span> <span class="plain-text">on</span> <span class="info-text">{{format_date created_at}}</span>
+           <span class="plain-text">By</span> <span class="info-text">{{user.username}}</span> <span class="plain-text">on</span> <span class="info-text">{{format_date created_at}}</span>
             <span class="plain-text">|</span>
            <a href="/post/{{id}}" class="comment-link">{{comments.length}} {{format_plural "comment" comments.length}}</a>
         </div>
