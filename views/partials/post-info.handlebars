@@ -6,8 +6,9 @@
          <!--Add PET name/info for each post, include image within post_content-->
         {{post_content}}
         <br>
+        <!--Add pet info in below 'by' section-->
         <div class="post-comments-info float-end">
-           By {{user.username}} on {{format_date created_at}}
+           By {{user.username}} on {{format_date created_at}} Pet: {{pet.petname}} the {{pet.pet_info}}
             |
            <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
         </div>
