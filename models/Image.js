@@ -21,7 +21,7 @@ Image.init(
                 len: [1]
             }
         },
-        imageURL: {
+        image_url: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
