@@ -34,22 +34,28 @@
 * [sequelize v6.20.1](https://www.npmjs.com/package/sequelize)
 
 ## Screenshot:
+* [Heroku Link:](https://dog-meet-dog-blog.herokuapp.com/)
+
 * Screenshot:
 
 ![This is the home page for the Dog Meet Dog Application!](/public/images/screenshot.jpg)
 
+* Gif:
+
+![This is a runthrough GIF of the hompage for Dog Meet Dog!](/public/images/Simple%20Home%20Page%20GIF.gif)
+
 
 ## Installation:
 * Download the zip file, or clone to your local machine.
-* Open a new terminal in the correct directory, and run command: npm i
-* Create a .env file; Populate the file with corresponding data: DB_NAME DB_USER - DB_PW  on separate lines, and insert your appropriate credentials.
+* Open a new terminal in the correct directory, and run command: `npm i`
+* Create a `.env` file; Populate the file with corresponding data: `DB_NAME` `DB_USER` - `DB_PW`  on separate lines, and insert your appropriate credentials.
 
 ## Usage:
-* After you finish installation procedures, enter the following command in the terminal: mysql -u (*insert username*) -p
+* After you finish installation procedures, enter the following command in the terminal: `mysql -u (*insert username*) -p`
 * Please enter your MySQL password when prompted.
-* In the MySQL command line, use command: source db/schema.sql; to create the proper database.
-* After the prompt displays the database was created, use command: quit; to exit the MySQL Command Line.
-* Lastly, use commands: npm run seed - npm start to seed your Database, and to start the server respectively.
+* In the MySQL command line, use command: `source db/schema.sql;` to create the proper database.
+* After the prompt displays the database was created, use command: `quit;` to exit the MySQL Command Line.
+* Lastly, use commands: `npm run seed` - `npm start` to seed your Database, and to start the server respectively.
 
 ## Author(s):
 * Alex Pappagallo 
