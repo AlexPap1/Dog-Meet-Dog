@@ -32,16 +32,7 @@ Image.init(
               model: 'user',
               key: 'id'
             }
-        },
-        asset_id: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            references: {
-                model: 'post',
-                key: 'image_asset_id'
-            }
-        },
+        }
     },
     {
         sequelize,

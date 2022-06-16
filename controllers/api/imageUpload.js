@@ -31,20 +31,20 @@ router.get('/images/', (req, res) => {
 });
 
 // POST new image for upload (router.use(/image/upload) as endpoint)
-router.post('/create/', upload.single("image"), (req, res) => {
-    cloudinary.uploader.upload(req.file.path, (err, result) => {
-        if (err) throw err;
-        Image.create({
-            imageName: req.body.fileName,
-            imageURL: result.secure_url,
-            user_id: req.session.user_id,
-            asset_id: result.asset_id,
-        }).then((imageData) => {
-            console.log(result);
-            res.send("complete!");
-        });
-    });
-});
+// router.post('/create/', upload.single("image"), (req, res) => {
+//     cloudinary.uploader.upload(req.file.path, (err, result) => {
+//         if (err) throw err;
+//         Image.create({
+//             imageName: req.body.fileName,
+//             imageURL: result.secure_url,
+//             user_id: req.session.user_id,
+//             asset_id: result.asset_id,
+//         }).then((imageData) => {
+//             console.log(result);
+//             res.send("complete!");
+//         });
+//     });
+// });
 
 // Export for external
 module.exports = router;
