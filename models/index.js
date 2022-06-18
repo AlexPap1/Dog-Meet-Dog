@@ -52,4 +52,12 @@ Post.belongsTo(Pet, {
     onDelete: 'SET NULL'
 });
 
+Image.hasOne(Post, {
+    foreignKey: 'image_id'
+});
+
+Post.belongsTo(Image, {
+    foreignKey: 'image_id'
+});
+
 module.exports = { User, Post, Comment, Pet, Image };
