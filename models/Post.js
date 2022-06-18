@@ -29,6 +29,13 @@ Post.init(
         model: 'user',
         key: 'id'
       }
+    },
+    image_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'image',
+        key: 'id'
+      }
     }
   },
   {

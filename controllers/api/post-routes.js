@@ -1,7 +1,21 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Pet } = require('../../models');
+const { Post, User, Comment, Pet, Image } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+// cloudinary and multer imports
+const multer = require('multer');
+const upload = multer({ dest: "uploads/" });
+const cloudinary = require("cloudinary").v2;
+
+// env import
+require('dotenv').config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 // get all users
 router.get('/', (req, res) => {
@@ -90,18 +104,29 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-  Post.create({
-    title: req.body.title,
-    post_content: req.body.post_content,
-    user_id: req.session.user_id
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+router.post('/', upload.single("image"), withAuth, (req, res) => {
+  // Image Upload & Create - .then Post Create
+  cloudinary.uploader.upload(req.file.path, (err, result) => {
+    if (err) throw err;
+    Image.create({
+      imageName: req.body.fileName,
+      imageURL: result.secure_url,
+      user_id: req.session.user_id,
+    }).then((imageData) => {
+      return Post.create({
+        title: req.body.post_title,
+        post_content: req.body.post_content,
+        user_id: req.session.user_id,
+        image_id: imageData.id,
+      }).then(dbPostData => {
+        console.log(dbPostData);
+        res.json(dbPostData);
+      }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
     });
+  });
 });
 
 router.put('/:id', withAuth, (req, res) => {

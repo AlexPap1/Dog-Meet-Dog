@@ -18,10 +18,11 @@
 * HTML
 * CSS
 * JavaScript
-* Node/[NPM Packages](#npm-packages)
+* Node / [NPM Packages](#npm-packages)
 
 ## NPM Packages:
 * [bcrypt v5.0.1](https://www.npmjs.com/package/bcrypt)
+* [bootstrap v5.1.3](https://www.npmjs.com/package/bootstrap)
 * [cloudinary v1.30.0](https://www.npmjs.com/package/cloudinary)
 * [connect-session-sequelize v7.1.4](https://www.npmjs.com/package/connect-session-sequelize)
 * [dotenv v16.0.1](https://www.npmjs.com/package/dotenv)

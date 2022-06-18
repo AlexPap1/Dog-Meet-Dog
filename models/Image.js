@@ -24,15 +24,19 @@ Image.init(
         imageURL: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isURL: true
-            }
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+              model: 'user',
+              key: 'id'
+            }
+        }
     },
     {
         sequelize,
         timestamps: false,
-        underscored: true,
         freezeTableName: true,
         modelName: "image",
     }
