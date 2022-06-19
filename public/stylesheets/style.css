@@ -2,12 +2,8 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-html {
-    height: 1500px
 }
 
 body {
@@ -16,6 +12,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-bottom: 100px
 }
 
 header {
@@ -63,6 +60,11 @@ header {
     font-size: larger;
 }
 
+.img {
+    max-height: 250px;
+    width: auto;
+}
+
 .plain-text {
     color: #374a02;
 }
@@ -70,7 +72,7 @@ header {
     color: #68724e;
 }
 
-.site-title:hover, .dash-link:hover, .add-pet-link:hover, .comment-link:hover, .edit-link:hover, .login-link:hover {
+.site-title:hover, .dash-link:hover, .add-pet-link:hover, .comment-link:hover, .login-link:hover {
     color: #374a02
 }
 
@@ -93,11 +95,9 @@ header {
     margin: 30px 22px auto auto;
 }
 
-.edit-link {
-    margin: 20px 20px 0 20px;
-    text-decoration: none;
-    color: #5c7c04;
-    padding-left: 2px;
+#edit-post {
+    margin-left: 22px;
+    margin-top: 10px;
 }
 
 footer {
@@ -107,7 +107,7 @@ footer {
     padding: 1%;
     font-size: 110%;
     color: #5c7c04;
-    background: radial-gradient( #dee5cd, #aebe82, #5c7c04)
+    background: radial-gradient( #dee5cd, #aebe82, #5c7c04);
 }
 
 .container{
@@ -116,6 +116,10 @@ footer {
     padding: 20px;
     margin-top: 50px;
     width: 50%;
+}
+
+#add-pet-container {
+    margin-top: 100px;
 }
 
 .login-title, .signup-title, .create-title, .add-pet-title, .edit-title, .no-posts {
@@ -129,14 +133,18 @@ footer {
     opacity: 100;
 }
 
-#signup-username, #signup-email, #signup-password, #login-email, #login-password, #post-title, #post-content, #petname-add, #petinfo-add {
+#signup-username, #signup-email, #signup-password, #login-email,
+#login-password, #post-title, #post-content, #petname-add,
+#petinfo-add, #imageUpload, #fileName {
     font-size: 20px;
     color: #5c7c04;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.login-password, .login-email, .post-title, .post-content, .petname-add, .petinfo-add, .signup-username, .signup-email, .signup-password {
+.login-password, .login-email, .post-title, .post-content,
+.petname-add, .petinfo-add, .signup-username, .signup-email,
+.signup-password, .imageUpload, .fileName {
     font-size: 20px;
     color: #5c7c04;
     margin-bottom: 15px;

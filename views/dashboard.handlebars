@@ -7,9 +7,9 @@
   {{#if posts.length}}
   <ol class="post-list">
     {{#each posts as |post|}}
-    <li>
+    <li class="post">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" ><button class="button is-primary" id="edit-post" >Edit Post</button></a>
     </li>
     {{/each}}
   </ol>
