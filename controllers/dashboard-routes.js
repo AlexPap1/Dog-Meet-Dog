@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Pet } = require('../models');
+const { Post, User, Comment, Pet, Image } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
@@ -13,9 +13,15 @@ router.get('/', withAuth, (req, res) => {
         'id',
         'title',
         'created_at',
-        'post_content'
+        'post_content',
+        'image_id'
+        
       ],
       include: [
+        {
+          model: Image,
+          attributes: ['imageURL']
+        },
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -40,15 +46,16 @@ router.get('/', withAuth, (req, res) => {
     })
       .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
+        console.log(posts);
         res.render('dashboard', { posts, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
-  
-  router.get('/edit/:id', withAuth, (req, res) => {
+});
+
+router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
       where: {
         id: req.params.id
@@ -99,9 +106,9 @@ router.get('/', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  });
+});
         
-  router.get('/create/', withAuth, (req, res) => {
+router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
         // use the ID from the session
@@ -145,8 +152,9 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
-  router.get('/add/', withAuth, (req, res) => {
+});
+  
+router.get('/add/', withAuth, (req, res) => {
     Pet.findAll({
       where: {
         // use the ID from the session
@@ -167,7 +175,7 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-  });
+});
       
-  module.exports = router;
+module.exports = router;
   

@@ -1,18 +1,32 @@
-<div class="container">
-  <h2 class="create-title"> Create New Post</h2>
-  <hr class="create-hr">
-  <form class="new-post-form">
-    <div>
-      <label for="post-title" class="post-title">Title</label>
-      <input type="text" name="post-title" id="post-title" placeholder="This is my Title"/>
+<section>
+  <a href="/dashboard" class="is-pulled-right"> &larr; Go Back</a>
+  <h2 class="title"> Create New Post</h2>
+  <hr>
+
+  <form class="new-post-form" id="upload" method="post" enctype="multipart/form-data">
+    <div class="container">
+      <h2 class="create-title"> Create New Post</h2>
+      <hr class="create-hr">
+      <div>
+        <label for="post-title" class="post-title">Title</label>
+        <input type="text" name="post_title" id="post-title" placeholder="This is my Title" />
+      </div>
+      <div>
+        <label for="post-content" class="post-content">Content</label>
+        <input type="text" name="post_content" id="post-content" placeholder="This is my Contents" />
+      </div>
+      <div>
+        <label for="imageUpload">Image</label>
+        <input type="file" name="image" id="imageUpload" />
+      </div>
+      <div>
+        <label for="fileName">File Name</label>
+        <input type="text" name="fileName" id="fileName" />
+      </div>
+      <button type="submit" class="btn">Create</button>
     </div>
-    <div>
-      <label for="post-content" class="post-content">Content</label>
-      <input type="text" name="post-content" id="post-content" placeholder="This is my Contents"/>
-    </div>
-    <!--div needed to upload photo for post-->
-    <button type="submit" class="btn">Create</button>
   </form>
 </section>
 
+{{!-- Script source tags --}}
 <script src="/javascript/add-post.js"></script>
