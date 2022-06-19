@@ -64,9 +64,14 @@ router.get('/edit/:id', withAuth, (req, res) => {
         'id',
         'title',
         'created_at',
-        'post_content'
+        'post_content',
+        'image_id'
       ],
       include: [
+        {
+          model: Image,
+          attributes: ['imageURL']
+        },
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
