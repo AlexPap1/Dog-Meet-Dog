@@ -16,7 +16,7 @@ async function PetFormHandler(event) {
       console.log(response);
 
       if (response.ok) {
-        document.location.replace('/dashboard/pets');
+        document.location.replace('/dashboard/');
       } else {
         alert(response.statusText);
       }
