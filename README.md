@@ -43,7 +43,7 @@
 
 * Gif:
 
-![This is a runthrough GIF of the hompage for Dog Meet Dog!](/public/images/Simple%20Home%20Page%20GIF.gif)
+![This is a runthrough GIF of the hompage for Dog Meet Dog!](https://user-images.githubusercontent.com/99618057/174508877-c8646e89-b613-4ddc-9e8f-1f40e3fba209.gif)
 
 
 ## Installation:
