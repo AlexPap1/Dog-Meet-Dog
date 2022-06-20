@@ -56,13 +56,15 @@ header {
    
 .card-header {
     background: linear-gradient(to right, #dee5cd, #aebe82, #5c7c04);
-    color: #374a02;
+    color: #405703;
     font-size: larger;
 }
 
 .img {
     max-height: 250px;
     width: auto;
+    border: 3.5px solid #5c7c04;
+    border-radius: 5px;
 }
 
 .plain-text {
@@ -89,15 +91,27 @@ header {
 
 #create-post {
     margin: 30px auto auto 22px;
+    padding: 0 3px;
+    color: #405703;
+    border-color: #405703;
+    border-radius: 3px;
 }
 
-#view-pets {
+/* #view-pets {
     margin: 30px 22px auto auto;
-}
+    color: #405703;
+    border-color: #405703;
+    border-radius: 3px;
+    padding: 0 3px;
+} */
 
 #edit-post {
     margin-left: 22px;
     margin-top: 10px;
+    color: #405703;
+    border-color: #405703;
+    border-radius: 3px;
+    padding: 0 3px;
 }
 
 footer {
@@ -189,7 +203,7 @@ input:focus {
 }
 
 .card-body-text, .comment-text {
-    color: #754927;
+    color: #405703;
 }
 
 .date-display {
