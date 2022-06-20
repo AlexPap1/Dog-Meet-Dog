@@ -2,14 +2,14 @@
   <div class="your-dash">
       <a href="/dashboard/create/"><button id="create-post" class="button is-primary">Create Post</button></a>
         <h2 class="dash-header">Your Posts</h2>
-      <a href="/dashboard/pets/"><button id="view-pets" class="button is-primary">My Pets</button></a>
+      {{!-- <a href="/dashboard/pets/"><button id="view-pets" class="button is-primary">My Pets</button></a> --}}
   </div>
   {{#if posts.length}}
   <ol class="post-list">
     {{#each posts as |post|}}
-    <li>
+    <li class="post">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" ><button class="button is-primary" id="edit-post" >Edit Post</button></a>
     </li>
     {{/each}}
   </ol>
