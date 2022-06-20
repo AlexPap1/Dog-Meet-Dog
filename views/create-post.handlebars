@@ -1,8 +1,4 @@
 <section>
-  <a href="/dashboard" class="is-pulled-right"> &larr; Go Back</a>
-  <h2 class="title"> Create New Post</h2>
-  <hr>
-
   <form class="new-post-form" id="upload" method="post" enctype="multipart/form-data">
     <div class="container">
       <h2 class="create-title"> Create New Post</h2>
@@ -16,12 +12,12 @@
         <input type="text" name="post_content" id="post-content" placeholder="This is my Contents" />
       </div>
       <div>
-        <label for="imageUpload">Image</label>
+        <label for="imageUpload" class="imageUpload">Image</label>
         <input type="file" name="image" id="imageUpload" />
       </div>
       <div>
-        <label for="fileName">File Name</label>
-        <input type="text" name="fileName" id="fileName" />
+        <label for="fileName" class="fileName">File Name</label>
+        <input type="text" name="fileName" id="fileName" placeholder="This is my File Name" />
       </div>
       <button type="submit" class="btn">Create</button>
     </div>

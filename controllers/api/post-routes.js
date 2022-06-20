@@ -119,7 +119,6 @@ router.post('/', upload.single("image"), withAuth, (req, res) => {
         user_id: req.session.user_id,
         image_id: imageData.id,
       }).then(dbPostData => {
-        console.log(dbPostData);
         res.json(dbPostData);
       }).catch(err => {
         console.log(err);

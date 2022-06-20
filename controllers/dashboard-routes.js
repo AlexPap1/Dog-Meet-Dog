@@ -64,9 +64,14 @@ router.get('/edit/:id', withAuth, (req, res) => {
         'id',
         'title',
         'created_at',
-        'post_content'
+        'post_content',
+        'image_id'
       ],
       include: [
+        {
+          model: Image,
+          attributes: ['imageURL']
+        },
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -153,6 +158,44 @@ router.get('/create/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
 });
+
+// router.get('/pets/', withAuth, (req, res) => {
+//   Pet.findAll({
+//     where: {
+//       user_id: req.session.user_id
+//     },
+//     attributes: [
+//       'id',
+//       'petname',
+//       'user_id',
+//       'pet_info',
+//       'created_at'
+//     ],
+//     include: [
+//       {
+//         model: User,
+//         attributes: ['username']
+//       },
+//       {
+//           model: Pet,
+//           attributes: ['id', 'petname', 'post_id', 'user_id', 'pet_info', 'created_at'],
+//           include: {
+//             model: User,
+//             attributes: ['username']
+//           }
+//       },
+//     ]
+//   })
+//     .then(dbPetData => {
+//       const pets = dbPetData.map(pet => pet.get({ plain: true }));
+//       console.log(pets);
+//       res.render('view-pets', { pets, loggedIn: true });
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
   
 router.get('/add/', withAuth, (req, res) => {
     Pet.findAll({
